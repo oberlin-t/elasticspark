@@ -5,5 +5,26 @@ body {
 div {
     color: #000000;
     font-family: Source Code Pro, monospace;
-    margin: 25px 200px 75px;
+    margin: 25px 200px 10px;
+}
+
+.navbar {
+    overflow:hidden;
+}
+
+.navbar a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    color: green;
+}
+
+.navbar a.active {
+    color: purple;
 }
