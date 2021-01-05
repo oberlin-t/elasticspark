@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/frontpage.css">
+  </head>
+  <body>
+
+    
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="cats.html">Cat Pics</a>
+      <a class="active" href="settings.html">Settings</a>
+    </div>
+    
+    <div>
+      <h2>Appearence</h2>
+      <p>To change the foreground and background colors, just type in the hex code and hit "Apply".</p>
+      <b id="bla">Foreground Color: #</b><input type="text" size="6" maxlength="6" id="fgcolor" name="fgcolor"> <br/>
+      <b>Background Color: #</b><input type="text" size="6" maxlength="6" id="bgcolor" name="bgcolor"> <br/>
+      <button onclick="grabColors()">Apply</button>
+    </div>
+    
+    <script src="scripts/settings.js"></script>
+    <script>loadCookie();</script>
+    
+  </body>
+</html>
