@@ -59,7 +59,7 @@ function loadCookie(){
     
     var fg = getCookies("foreground");
     var bg = getCookies("background");
-    if((bg && fg) != ""){
+    if((bg != "") || (fg != "")){
         setColors(bg,fg);
     }
     
