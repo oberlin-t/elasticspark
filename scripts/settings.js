@@ -1,11 +1,20 @@
 function setColors(bg, fg) {
     //change bg color
-    let divElements = document.getElementsByTagName('div');
     document.body.style.background = "#" + String(bg);
+
     //change fg color
+    let divElements = document.getElementsByTagName('div');
+    let navElements = document.getElementsByTagName('a'); //this might hit some other hyperlinks again with styling though its not clear if that matters?
+   
     for (var i=0; i<divElements.length; i++){
         divElements[i].style.color = "#" + String(fg);
     }
+    
+    for (var j=0; j<navElements.length; j++){
+        navElements[j].style.color = "#" + String(fg);
+    }
+    
+    
 }
 
 function grabColors() {
