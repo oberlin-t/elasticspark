@@ -1,0 +1,37 @@
+:root {
+    --bg-color: #ffffff;
+    --fg-color: #000000;
+    --secondary-fg: #136207;
+    --tertiary-fg: #800080
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+div {
+    color: var(--fg-color);
+    font-family: Source Code Pro, monospace;
+    margin: 25px 200px 10px;
+}
+
+.navbar {
+    overflow:hidden;
+}
+
+.navbar a {
+    float: left;
+    text-align: center;
+    color: var(--fg-color);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    color: var(--secondary-fg);
+}
+
+.navbar a.active {
+    color: var(--tertiary-fg);
+}
