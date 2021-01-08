@@ -9,23 +9,22 @@ function grabColors() {
     let secol = document.getElementById('secolor').value;
     let tertcol = document.getElementById('tertcolor').value;
     
-    //set colors
-    setColor('--bg-color',bgcol);
-    setColor('--fg-color',fgcol);
-    setColor('--secondary-fg',secol);
-    setColor('--tertiary-fg',tertcol);
-    //save settings in localStorage
+    //save settings in localStorage and set colors
     if (String(bgcol) != ""){
         localStorage.setItem("background", String(bgcol))
+        setColor('--bg-color',bgcol);
     }
     if (String(fgcol) != ""){
         localStorage.setItem("foreground", String(fgcol))
+        setColor('--fg-color',fgcol);
     }
     if (String(secol) != ""){
         localStorage.setItem("secondary", String(secol))
+        setColor('--secondary-fg',secol);
     }
     if (String(tertcol) != "") {
         localStorage.setItem("tertiary", String(tertcol))
+        setColor('--tertiary-fg',tertcol);
     }
 }
 
