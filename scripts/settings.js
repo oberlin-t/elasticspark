@@ -1,8 +1,5 @@
-function setColors(bg, fg) {
-    //change bg color
-    document.body.style.background = "#" + String(bg);
-
-    //change fg color
+function fgColor(fg) {
+    
     let divElements = document.getElementsByTagName('div');
     let navElements = document.getElementsByTagName('a'); //this might hit some other hyperlinks again with styling though its not clear if that matters?
    
@@ -13,8 +10,10 @@ function setColors(bg, fg) {
     for (var j=0; j<navElements.length; j++){
         navElements[j].style.color = "#" + String(fg);
     }
-    
-    
+}
+
+function bgColor(bg){
+    document.body.style.background = "#" + String(bg);
 }
 
 function grabColors() {
@@ -22,47 +21,25 @@ function grabColors() {
     let fgcol = document.getElementById('fgcolor').value;
     let bgcol = document.getElementById('bgcolor').value;
 
-    //set colors with setColors function
-    setColors(bgcol, fgcol);
-
-    //save settings in cookies
-    document.cookie = ("background=" + String(bgcol))
-    document.cookie = ("foreground=" + String(fgcol))
-    
+    //set colors
+    fgColor(fgcol);
+    bgColor(bgcol);
+    //save settings in localStorage
+    localStorage.setItem("background", String(bgcol))
+    localStorage.setItem("foreground", String(fgcol))
 }
-
-/*please note that the next function was copied from the
-  internet and that I don't entirly understand it yet */
-/* also WARNING do not use the following function on a cookie with only one term. It may cause it to slow the web page */
-
-function getCookies(cname) {
-    if (document.cookie.match(';')){
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split('; ');
-      console.log(ca);
-      for(var i=0; i<ca.length; i++){
-          var c = ca[i];
-          while (c.charAt(0)==''){
-              c=c.substring(1);
-          }
-          if (c.indexOf(name)==0){
-              return c.substring(name.length,c.length);
-          }
-      }
-        return "";
-    }
-}
-
 
 function loadCookie(){
     
-    var fg = getCookies("foreground");
-    var bg = getCookies("background");
-    if((bg != "") || (fg != "")){
-        setColors(bg,fg);
+    var fg = localStorage.getItem("foreground");
+    var bg = localStorage.getItem("background");
+
+    if (localStorage.getItem("foreground") != ""){
+        fgColor(fg);
     }
-    
+    if (localStorage.getItem("background") != ""){
+        bgColor(bg);
+    }
 }
 
 
