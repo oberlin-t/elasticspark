@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET cat pics. */
 router.get('/', function(req, res, next) {
   res.render('cats', { title: 'Cat Pics' });
 });
