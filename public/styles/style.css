@@ -11,7 +11,7 @@ body {
 
 div {
     color: var(--fg-color);
-    font-family: Source Code Pro, monospace;
+    font-family: DejaVu Sans Mono, monospace;
     margin: 25px 200px 10px;
 }
 
