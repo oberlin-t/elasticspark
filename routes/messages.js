@@ -35,7 +35,8 @@ router.get('/', function(req, res) {
     
 
 router.post('/', function(req, res) {
-  messagecore.storeMessage(req.body.reciever,req.cookies.username, req.body.text);
+    messagecore.storeMessage(req.body.reciever,req.cookies.username, req.body.text);
+    res.render('messages', { title: 'Message Sent' });
 })
 
 module.exports = router;
