@@ -10,7 +10,10 @@ body {
 div {
     color: var(--fg-color);
     font-family: DejaVu Sans Mono, monospace;
-    margin: 25px 200px 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .navbar {
