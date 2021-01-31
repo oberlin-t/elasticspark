@@ -15,20 +15,30 @@
 
     <%- include('navbar.ejs'); %>
  
-    <div>
+    <div class="main">
+
       <h1><%= title %>!</h1>
 
-      <label for "username">Input username.</label> <br>
-      <input name="username" id="username"> <br>
+      <div class="flexparent">
+        <div class="flexitem">
 
-      <form action="/messages" method="POST" onsubmit="getUsername()">
-        <label for="reciever">Input target username.</label> <br>
-        <input name="reciever" id="reciever"> <br>
-        <label for="text">Input Message</label> <br>
-        <input name="text" id="text"> <br>
-        <input type="submit" onclick="getUsername()" value="Fire The Cannon!">
-      </form>
+          <label for "username">Input username.</label> <br>
+          <input name="username" id="username"> <br>
 
+          <form action="/messages" method="POST" onsubmit="getUsername()" class="inline">
+            <label for="reciever">Input target username.</label> <br>
+            <input name="reciever" id="reciever"> <br>
+            <label for="text">Input Message</label> <br>
+            <input name="text" id="text"> <br>
+            <input type="submit" onclick="getUsername()" value="Fire The Cannon!">
+          </form> 
+        </div>
+
+
+        <div class="messageDisplay flexitem">
+          <p>lorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit amet </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

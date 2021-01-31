@@ -7,7 +7,7 @@ body {
     background-color: var(--bg-color);
 }
 
-div {
+div.main {
     color: var(--fg-color);
     font-family: DejaVu Sans Mono, monospace;
     margin-left: 10%;
@@ -27,4 +27,20 @@ div {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+
+.flexparent {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flexitem {
+    flex-grow: 4;
+}
+
+div.messageDisplay {
+    border: var(--fg-color) 0.25vw solid;
+    width: 25vw;
+    height: 25vw;
+    overflow: scroll;
 }
