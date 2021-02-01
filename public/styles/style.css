@@ -31,16 +31,16 @@ div.main {
 
 .flexparent {
     display: flex;
-    justify-content: flex-start;
 }
 
-.flexitem {
-    flex-grow: 4;
+.input {
+    flex-shrink: 1;
 }
 
 div.messageDisplay {
     border: var(--fg-color) 0.25vw solid;
-    width: 25vw;
-    height: 25vw;
     overflow: scroll;
+    flex-grow: 1;
+    max-height: 10vw;
+    max-width: 10vw;
 }

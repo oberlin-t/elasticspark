@@ -9,6 +9,7 @@
     <meta name="author" content="Thomas Oberlin">
     <%- include('head.ejs'); %>
     <script src="scripts/messages.js"></script>
+    
   <head/>
   
   <body>
@@ -20,25 +21,25 @@
       <h1><%= title %>!</h1>
 
       <div class="flexparent">
-        <div class="flexitem">
-
-          <label for "username">Input username.</label> <br>
-          <input name="username" id="username"> <br>
+        <div class="input">
 
           <form action="/messages" method="POST" onsubmit="getUsername()" class="inline">
+            <label for "username">Input username.</label> <br>
+            <input name="username" id="username" required> <br>
+            <input type="button" onclick="getUsername()" value="Set Username!"> <br>
             <label for="reciever">Input target username.</label> <br>
-            <input name="reciever" id="reciever"> <br>
+            <input name="reciever" id="reciever" required> <br>
             <label for="text">Input Message</label> <br>
-            <input name="text" id="text"> <br>
+            <input name="text" id="text" type="text" required> <br>
             <input type="submit" onclick="getUsername()" value="Fire The Cannon!">
           </form> 
         </div>
 
-
-        <div class="messageDisplay flexitem">
-          <p>lorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit ametlorum ipsum dolar sit amet </p>
+        <script>loadLast("username"); loadLast("reciever");</script>
+        
+        <div class="messageDisplay">
+          <p><%= message %></p>
         </div>
       </div>
     </div>
-  </body>
 </html>

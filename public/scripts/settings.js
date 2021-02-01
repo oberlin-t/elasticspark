@@ -1,5 +1,5 @@
 function setColor(cssvar,color) {
-    document.documentElement.style.setProperty(cssvar, '#' + String(color));
+    document.documentElement.style.setProperty(cssvar, String(color));
 }
 
 function grabColors() {
