@@ -4,6 +4,7 @@
   <head>
     <title><%= title %> - Elasticspark</title>
     <%- include('head.ejs'); %>
+
   </head>
   <body>
 
@@ -15,5 +16,6 @@
       <b>Background Color: </b><input type="color" id="bgcolor" name="bgcolor" value="#ffffff"> <br/>
       <button onclick="grabColors()">Apply</button>
     </div>
+    <script> setColorChooser("fgcolor"); setColorChooser("bgcolor"); </script>
   </body>
 </html>
