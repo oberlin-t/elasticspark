@@ -5,11 +5,13 @@ const messagecore = require("../js/messagecore")
 
 router.use(cookieParser());
 
+
 router.get('/', function(req, res) {    
 
-  function loadPage(data){
-      res.render('messages', { title: 'Messages', message: data });
-  }
+function loadPage(data){
+    res.render('messages', { title: 'Messages', message: data });
+}
+
     
   if (fs.existsSync("js/pending/" + req.cookies.username + ".txt")){ 
 
@@ -35,8 +37,8 @@ router.get('/', function(req, res) {
     
 
 router.post('/', function(req, res) {
-    messagecore.storeMessage(req.body.reciever,req.cookies.username, req.body.text);
-    res.render('messages', { title: 'Message Sent', message: "" });
+    messagecore.storeMessage(req.body.reciever,req.body.username, req.body.text);
+    res.redirect('/messages');
 })
 
 module.exports = router;
