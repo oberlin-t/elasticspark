@@ -13,3 +13,13 @@ function loadLast(id){
    }
     return;
 }
+
+function saveMessage(message){
+    if (localStorage.getItem("message") == null && message != ""){
+        localStorage.setItem("message", message);
+    } else if (message != ""){
+        localStorage.setItem("message", localStorage.getItem("message") + " || " + message);
+    }
+    
+    document.getElementById("output").innerHTML = localStorage.getItem("message");    
+}

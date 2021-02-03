@@ -10,7 +10,7 @@
     <%- include('head.ejs'); %>
     <script src="scripts/messages.js"></script>
     
-  <head/>
+  </head>
   
   <body>
 
@@ -37,9 +37,12 @@
 
         <script>loadLast("username"); loadLast("reciever");</script>
         
+        
         <div class="messageDisplay">
-          <p><%= message %></p>
+          <p id="output"></p>
         </div>
       </div>
     </div>
+    <script>saveMessage('<%= message %>');</script>
+  </body>
 </html>
