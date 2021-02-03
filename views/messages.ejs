@@ -21,9 +21,8 @@
       <h1><%= title %>!</h1>
 
       <div class="flexparent">
-        <div class="input">
-
-          <form action="/messages" method="POST" onsubmit="getUsername()" class="inline">
+        
+          <form class="input" action="/messages" method="POST" onsubmit="getUsername()" class="inline">
             <label for "username">Input username.</label> <br>
             <input name="username" id="username" required> <br>
             <input type="button" onclick="getUsername()" value="Set Username!"> <br>
@@ -33,8 +32,7 @@
             <textarea name="text" id="text" rows="4" col="50" required></textarea> <br>
             <input type="submit" onclick="getUsername()" value="Fire The Cannon!">
           </form> 
-        </div>
-
+        
         <script>loadLast("username"); loadLast("reciever");</script>
         
         
