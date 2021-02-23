@@ -26,7 +26,10 @@ div.main {
     color: var(--fg-color);
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+}
+
+.navbar a:hover {
+    /*color: var(--bg-color);*/
 }
 
 .flexparent {

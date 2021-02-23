@@ -3,7 +3,7 @@ fs = require('fs');
 function storeMessage(username, from, message)
 {
     if (fs.existsSync('js/pending/' + username + '.txt')){
-        fs.appendFile('js/pending/' + username + '.txt', "\n" + from + " | " + message, function(err){
+        fs.appendFile('js/pending/' + username + '.txt', " " + from + " | " + message, function(err){
             if (err) throw err;
         });
     }
