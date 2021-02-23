@@ -1,9 +1,13 @@
+function getData(){
+    let reciever = document.getElementById('reciever').value;
+    localStorage.setItem("reciever", reciever);
+    return;
+}
+
 function getUsername(){
     let username = document.getElementById('username').value;
-    let reciever = document.getElementById('reciever').value;
     document.cookie = "username="+username;
     localStorage.setItem("username", username);
-    localStorage.setItem("reciever", reciever);
     return;
 }
 
@@ -22,4 +26,14 @@ function saveMessage(message){
     }
     
     document.getElementById("output").innerHTML = localStorage.getItem("message");    
+}
+
+function redirect(){
+    window.location.href="messages";
+}
+
+function isLoggedIn(){
+    if (localStorage.getItem("username") == null){
+        window.location.href="login";
+    } 
 }

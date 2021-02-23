@@ -5,6 +5,8 @@ var indexRouter = require('./routes/index');
 var catsRouter = require('./routes/cats');
 var settingsRouter = require('./routes/settings');
 var messagesRouter = require('./routes/messages');
+var loginRouter = require('./routes/login');
+var aboutRouter = require('./routes/about');
 
 var app = express();
 
@@ -20,5 +22,7 @@ app.use('/messages',messagesRouter);
 app.use('/', indexRouter);
 app.use('/cats', catsRouter);
 app.use('/settings', settingsRouter);
+app.use('/login', loginRouter);
+app.use('/about', aboutRouter);
 
 module.exports = app;

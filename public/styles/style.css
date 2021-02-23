@@ -32,6 +32,11 @@ div.main {
     /*color: var(--bg-color);*/
 }
 
+#login {
+    float: right;
+}
+
+
 .flexparent {
     display: flex;
     justify-content: space-between;

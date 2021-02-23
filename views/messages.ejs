@@ -9,7 +9,7 @@
     <meta name="author" content="Thomas Oberlin">
     <%- include('head.ejs'); %>
     <script src="scripts/messages.js"></script>
-    
+    <script>isLoggedIn();</script>
   </head>
   
   <body>
@@ -22,18 +22,15 @@
 
       <div class="flexparent">
         
-          <form class="input" action="/messages" method="POST" onsubmit="getUsername()" class="inline">
-            <label for "username">What is your username?</label> <br>
-            <input name="username" id="username" required> <br>
-            <input type="button" onclick="getUsername()" value="Set Username!"> <br>
+          <form class="input" action="/messages" method="POST" onsubmit="getData()" class="inline">
             <label for="reciever">Who are you sending this message to?</label> <br>
             <input name="reciever" id="reciever" required> <br>
             <label for="text">Input Message</label> <br>
             <textarea name="text" id="text" rows="4" col="50" required></textarea> <br>
-            <input type="submit" onclick="getUsername()" value="Fire The Cannon!">
+            <input type="submit" onclick="getData()" value="Fire The Cannon!">
           </form> 
         
-        <script>loadLast("username"); loadLast("reciever");</script>
+          <script>loadLast("reciever");</script>
         
         
         <div class="messageDisplay">

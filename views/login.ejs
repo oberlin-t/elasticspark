@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title><%= title %> - Elasticspark</title>
+    <%- include('head.ejs'); %>
+    <script src="scripts/messages.js"></script>
+  </head>
+  <body>
+    
+    <%- include('navbar.ejs'); %>
+
+    <div class="main">
+      <h1><%= title %></h1>
+      <form onsubmit="getUsername(); redirect(); return false;">
+      <label for="username">Username</label><br>
+      <input name="username" id="username" required> <br>
+      <input type="submit" value="Login/Sign-Up"> <br>
+      </form>
+    </div>
+  </body>
+</html

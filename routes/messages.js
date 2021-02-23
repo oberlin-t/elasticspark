@@ -37,7 +37,7 @@ function loadPage(data){
     
 
 router.post('/', function(req, res) {
-    messagecore.storeMessage(req.body.reciever,req.body.username, req.body.text);
+    messagecore.storeMessage(req.body.reciever,req.cookies.username, req.body.text);
     res.redirect('/messages');
 })
 
