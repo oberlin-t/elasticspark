@@ -3,11 +3,10 @@
     --fg-color: #000000;
 }
 
+
+
 body {
     background-color: var(--bg-color);
-}
-
-div.main {
     color: var(--fg-color);
     font-family: DejaVu Sans Mono, monospace;
     margin-left: 10%;
@@ -54,4 +53,11 @@ div.messageDisplay {
     flex-grow: 1;
     max-height: 30vw;
     max-width: 60vw;
+}
+
+#trip {
+    cursor:pointer;
+}
+#trip:hover {
+    opacity: 0.7;
 }

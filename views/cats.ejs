@@ -4,19 +4,29 @@
   <head>
     <title><%= title %> - Elasticspark</title>
     <%- include('head.ejs'); %>
+    <script src="scripts/cats.js"></script>
   </head>
   <body>
     
     <%- include('navbar.ejs'); %>
 
-    <div class="main">
-      <h1>Cats!</h1>
-      <img src="images/trip.jpg" alt="Image of my cat." width="358" height="618">
-      <img src="images/trip2.jpg" alt="Image of my cat." width="463" height="618">
-      <img src="images/trip3.jpg" alt="Image of my cat." width="463" height="618">
-      <img src="images/trip4.jpg" alt="Image of my cat." width="463" height="618">
-      <img src="images/trip5.jpg" alt="Image of my cat." width="463" height="618">
-      <img src="images/trip6.jpg" alt="Image of my cat." width="463" height="618">
+
+    <h1>Cats!</h1>
+   
+      <div onclick="revealMore('trip')" class="profile">
+        <img id="trip" src="images/trip6.jpg" alt="Image of my cat." width="30%">
+      </div>
+      
+      <div class="theCats" id="tripImages">
+        <script>initialHideCats();</script>
+        <img src="images/trip6.jpg" alt="Image of my cat." width="30%">
+        <img src="images/trip5.jpg" alt="Image of my cat." width="30%">
+        <img src="images/trip4.jpg" alt="Image of my cat." width="30%">
+        <img src="images/trip3.jpg" alt="Image of my cat." width="30%">
+        <img src="images/trip2.jpg" alt="Image of my cat." width="30%">
+        <img src="images/trip.jpg" alt="Image of my cat." width="30%">
+      
+      
     </div>
   </body>
-</html
+</html>
