@@ -1,5 +1,5 @@
 function setLoggedIn(){
-    if (localStorage.getItem("username") != null){
+    if (document.cookie != ""){
         document.getElementById("login").innerHTML = localStorage.getItem("username");
     }
 }

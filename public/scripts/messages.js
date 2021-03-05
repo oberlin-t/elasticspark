@@ -6,7 +6,10 @@ function getData(){
 
 function getUsername(){
     let username = document.getElementById('username').value;
-    document.cookie = "username="+username;
+    var today = new Date();
+    var expire = new Date();
+    expire.setTime(today.getTime() + 3600000*24*14);
+    document.cookie = "username="+username + ";expires="+expire.toGMTString();
     localStorage.setItem("username", username);
     return;
 }
@@ -33,7 +36,7 @@ function redirect(){
 }
 
 function isLoggedIn(){
-    if (localStorage.getItem("username") == null){
+    if (document.cookie == ""){
         window.location.href="login";
     } 
 }
