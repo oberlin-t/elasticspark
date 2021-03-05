@@ -5,7 +5,7 @@ function hideCats(){
     }
     var profiles = document.getElementsByClassName("profile");
     for (var i = 0; i < profiles.length; ++i){
-        profiles[i].style.display = "block";
+        profiles[i].style.display = "inline";
     }
     document.getElementsByTagName("h1")[0].innerHTML = "Cats!";
 }
