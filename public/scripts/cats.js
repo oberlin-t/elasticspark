@@ -28,5 +28,14 @@ function revealMore(cat){
     if(cat == 'trip'){
         document.getElementById("tripImages").style.display = "block";
     }
+    if(cat == 'chad'){
+        document.getElementById("chadImages").style.display = "block";
+    }
+    if(cat == 'denali'){
+        document.getElementById("denaliImages").style.display = "block";
+    }
+    if(cat == 'hopper'){
+        document.getElementById("hopperImages").style.display = "block";
+    }
 }
 
